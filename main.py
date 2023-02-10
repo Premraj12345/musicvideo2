@@ -6,7 +6,7 @@ from time import sleep
 st.header('App') 
 
 url = 'https://checker.in/go/4626012'
-youtube_ffmpeg_command = 'ffmpeg -re  -stream_loop -1 -i video.mp4 -c copy output.mp4 -c:v libx264 -c:a aac -b:v 2500k -g 48 -keyint_min 48 -sc_threshold 0 -f flv rtmp://a.rtmp.youtube.com/live2/egr2-jwmx-pshz-e1g8-cc6k'
+youtube_ffmpeg_command = 'script.sh "rtmp://a.rtmp.youtube.com/live2" "egr2-jwmx-pshz-e1g8-cc6k" "video.mp4"
 
 status = download(url,'video.mp4')
 st.markdown(status)
